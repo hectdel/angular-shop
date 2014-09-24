@@ -3,6 +3,7 @@ html 					{ overflow-y:scroll; }
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%;
     background: #f2f9fe;
     background: -moz-radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%);
     /* FF3.6+ */
@@ -18,15 +19,21 @@ html 					{ overflow-y:scroll; }
     /* W3C */
 }
 
-#todo-list 				{ margin-bottom:30px; }
-#todo-form 	 			{ margin-bottom:50px; }
+.texto_cabecera {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: #d6f0fd;
+}
+
 
 .btn_catalogo{
     background-image:url('/img/Catalogo_bn.png');
     background-position: center;
     background-size: 75% ;
     background-repeat: no-repeat;
-    background-color:  #eeecac;
+    background-color:  #f2f9fe;
     width:120px;
     height:120px;
     border-radius:100%;
@@ -38,6 +45,7 @@ html 					{ overflow-y:scroll; }
     float:left;
     padding-left: 15px;
     display: block;
+    color: black;
 }
 
 .btn_catalogo:hover{
@@ -46,13 +54,14 @@ html 					{ overflow-y:scroll; }
     background-position: center;
     background-size: 75%;
     background-repeat: no-repeat;
-    background-color:  #ddcfff;
+    background-color:  #d6f0fd;
     width:120px;
     height:120px;
     text-transform: uppercase;
     text-decoration: none;
     text-align: center;
     font-weight: bold;
+    color: black;
     float:left;
     padding-left: 15px;
     display: block;
@@ -62,7 +71,9 @@ html 					{ overflow-y:scroll; }
     line-height: 260px;
 }
 .cabecera_menu ul li{
-    padding-left: 50px;
+    padding: 0 15px;
     list-style:none;
     text-decoration: none;
+    position:relative;
+    left:100%;
 }
