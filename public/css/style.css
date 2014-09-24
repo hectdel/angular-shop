@@ -1,0 +1,68 @@
+html 					{ overflow-y:scroll; }
+.cabecera_menu {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #f2f9fe;
+    background: -moz-radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #f2f9fe), color-stop(100%, #d6f0fd));
+    /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%);
+    /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%);
+    /* IE10+ */
+    background: radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%);
+    /* W3C */
+}
+
+#todo-list 				{ margin-bottom:30px; }
+#todo-form 	 			{ margin-bottom:50px; }
+
+.btn_catalogo{
+    background-image:url('/img/Catalogo_bn.png');
+    background-position: center;
+    background-size: 75% ;
+    background-repeat: no-repeat;
+    background-color:  #eeecac;
+    width:120px;
+    height:120px;
+    border-radius:100%;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 11px;
+    text-align: center;
+    font-weight: bold;
+    float:left;
+    padding-left: 15px;
+    display: block;
+}
+
+.btn_catalogo:hover{
+    border-radius:100%;
+    background-image:url('/img/Catalogo.png');
+    background-position: center;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-color:  #ddcfff;
+    width:120px;
+    height:120px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    float:left;
+    padding-left: 15px;
+    display: block;
+}
+
+.cabecera_menu span{
+    line-height: 260px;
+}
+.cabecera_menu ul li{
+    padding-left: 50px;
+    list-style:none;
+    text-decoration: none;
+}
