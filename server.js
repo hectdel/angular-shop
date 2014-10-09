@@ -2,7 +2,7 @@
 var express  = require('express');
 var app      = express(); 								// create our app w/ express
 var mongoose = require('mongoose'); 					// mongoose for mongodb
-var port  	 = process.env.PORT || 8080; 				// set the port
+var port  	 = process.env.PORT || 3000; 				// set the port
 var database = require('./config/database'); 			// load the database config
 
 var morgan = require('morgan'); 		// log requests to the console (express4)
@@ -20,7 +20,7 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse applica
 app.use(methodOverride());
 
 // routes ======================================================================
-require('./app/routes.js')(app);
+require('./app/mongoAPI.js')(app);
 
 // listen (start app with node server.js) ======================================
 app.listen(port);

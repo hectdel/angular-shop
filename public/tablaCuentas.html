@@ -1,0 +1,60 @@
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="shop">
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+    <title>Node/Angular Todo App</title>
+
+    <!-- SCROLLS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <!-- SPELLS -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script><!-- load angular -->
+    <script src="core.js"></script>
+    <script src="includes.js"></script>
+
+
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(function(){
+            $("#cabecera").load("cabecera.html");
+        });
+    </script>
+
+</head>
+<!-- SET THE CONTROLLER AND GET ALL TODOS WITH INITIALIZE FUNCTION -->
+<body>
+<!-- INCLUDE CABECERA -->
+<div class="container-fluid" id="cabecera"></div>
+<div class="container">
+
+    <div ng-controller="cuentasCtrl">
+        <table  class="table  table-striped">
+            <thead>
+            <tr><th colspan="4">Usuarios de Cuentas</th></tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="cuentaDBO in cuentasList">
+                <td>{{$index +1}}</td>
+                <td>
+                    {{cuentaDBO.email}}
+                </td>
+                <td>
+                    {{cuentaDBO.user}}
+                </td>
+                <td>
+                    {{cuentaDBO.country}}
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
+
