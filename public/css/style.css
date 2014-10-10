@@ -68,6 +68,14 @@ html 					{ overflow-y:scroll; }
     display: block;
 }
 
+.imagen_seccion {
+    width:100px;
+    height:100px;
+    color: black;
+    display: block;
+    margin-left: 20px;
+}
+
 .cabecera_menu span{
     line-height: 260px;
 }
