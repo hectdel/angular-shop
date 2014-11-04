@@ -15,7 +15,7 @@
 
     <!-- SPELLS -->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script><!-- load angular -->
-    <script src="core.js"></script>
+    <script src="gestionLibrosCtr.js"></script>
     <script src="includes.js"></script>
 
 
@@ -36,10 +36,10 @@
         <div class="col-lg-4">
             <ul>
                 <li>
-                    <a class="btn_catalogo" href="#"><span>Gestor Textos</span></a>
+                    <a class="btn_catalogo" href="tablaCuentas.html"><span>Gestor Textos</span></a>
                 </li>
                 <li>
-                    <a class="btn_catalogo" href="gestionLibros.html"><span>Gestor Cursos</span></a>
+                    <a class="btn_catalogo" href="#"><span>Gestor Cursos</span></a>
                 </li>
                 <li>
                     <a class="btn_catalogo" href="index.html"><span>Gestor Textos</span></a>
@@ -58,25 +58,25 @@
         <img src="/img/Catalogo.png" class="imagen_seccion">
     </div>
     <!--Table-->
-    <div ng-controller="cuentasCtrl" style="padding-top:20px">
-        <div class="input-group"> <span class="input-group-addon">Filtrar</span>
-            <input id="filter" style="width: 100%" class="input-medium" ng-model="nameFilter" placeholder="Escribir aqui...">
-        </div>
+    <div ng-controller="gestionLibrosCtr" style="padding-top:20px">
         <table  class="table  table-striped table-bordered table-hover" style="width: 100%">
             <thead>
-            <tr><th colspan="4">Usuarios de Cuentas</th></tr>
+            <tr><th colspan="5">Gestion de Libros</th></tr>
             </thead>
             <tbody>
-            <tr ng-repeat="cuentaDBO in cuentasList | filter: searchFilter">
+            <tr ng-repeat="libroDBO in librosList">
                 <td>{{$index +1}}</td>
                 <td>
-                    {{cuentaDBO.email}}
+                    {{libroDBO.Cod_Art}}
                 </td>
                 <td>
-                    {{cuentaDBO.user}}
+                    {{libroDBO.Articulo}}
                 </td>
                 <td>
-                    {{cuentaDBO.country}}
+                    {{libroDBO.pvp_no_iva}}
+                </td>
+                <td>
+                    {{libroDBO.pvp_iva}}
                 </td>
             </tr>
             </tbody>
