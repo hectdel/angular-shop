@@ -1,4 +1,5 @@
 var Cuenta = require('./models/cuentaDBO');
+var Libro = require('./models/libroDBO');
 
 module.exports = function(app) {
 
@@ -16,6 +17,21 @@ module.exports = function(app) {
 			res.json(cuentasList); // return all todos in JSON format
 		});
 	});
+
+
+    // get libros
+    app.get('/libros', function(req, res) {
+
+        // use mongoose to get all todos in the database
+        Libro.find(function(err, librosList) {
+
+            // if there is an error retrieving, send the error. nothing after res.send(err) will execute
+            if (err)
+                res.send(err)
+
+            res.json(librosList); // return all todos in JSON format
+        });
+    });
 
 	// application -------------------------------------------------------------
 	app.get('*', function(req, res) {
