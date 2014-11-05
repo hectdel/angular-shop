@@ -1,9 +1,11 @@
 html {
     overflow-y: scroll;
+    height: 100%;
 }
 
 body {
     background: #c6c9cb;
+    height: 100%;
     background: -moz-radial-gradient(center, ellipse cover, #c6c9cb 0%, #e3e6e8 100%);
     /* FF3.6+ */
     background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #c6c9cb), color-stop(100%, #E3E6E8));
@@ -32,20 +34,14 @@ body {
     /* IE10+ */
     background: radial-gradient(center, ellipse cover, orange 0%, #f6dfd4 100%);
     /* W3C */
+    height:140px;
 }
 
 .cabecera_menu span {
+    line-height: 245px;
 
-    line-height: 260px;
 }
 
-.cabecera_menu ul li {
-    padding: 0 15px;
-    list-style: none;
-    text-decoration: none;
-    position: relative;
-    left: 100%;
-}
 
 .btn_catalogo {
     background-image: url('/img/Catalogo_bn.png');
@@ -202,15 +198,35 @@ body {
 }
 
 .form_cliente {
-    background-color: lightgray;
-    color: white;
+    background: -moz-radial-gradient(center, ellipse cover, #c6c9cb 0%, #e3e6e8 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #c6c9cb), color-stop(100%, #E3E6E8));
+    /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #c6c9cb 0%, #E3E6E8 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, #c6c9cb 0%, #E3E6E8 100%);
+    /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, #c6c9cb 0%, #E3E6E8 100%);
+    /* IE10+ */
+    background: radial-gradient(center, ellipse cover, #c6c9cb 0%, #E3E6E8 100%);
+    color: black;
     width: 800px;
     height: 100%;
 }
 
 .legend {
-    background-color: orange;
-    color: white;
+    background: -moz-radial-gradient(center, ellipse cover, orange 0%, #f6dfd4 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, orange), color-stop(100%, #f6dfd4));
+    /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, orange 0%, #f6dfd4 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, orange 0%, #f6dfd4 100%);
+    /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, orange 0%, #f6dfd4 100%);
+    /* IE10+ */
+    background: radial-gradient(center, ellipse cover, orange 0%, #f6dfd4 100%);
+    color: whitesmoke;
     text-align: center;
     vertical-align: middle;
 }
