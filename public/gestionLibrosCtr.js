@@ -1,4 +1,4 @@
-var shop = angular.module('shop', []);
+var shop = angular.module('shop', ['ui.bootstrap']);
 
 function gestionLibrosCtr($scope, $http) {
     $scope.formData = {};

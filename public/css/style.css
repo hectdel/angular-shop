@@ -1,88 +1,216 @@
-html 					{ overflow-y:scroll; }
-.cabecera_menu {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    background: #f2f9fe;
-    background: -moz-radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%);
+html {
+    overflow-y: scroll;
+}
+
+body {
+    background: #c6c9cb;
+    background: -moz-radial-gradient(center, ellipse cover, #c6c9cb 0%, #e3e6e8 100%);
     /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #f2f9fe), color-stop(100%, #d6f0fd));
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #c6c9cb), color-stop(100%, #E3E6E8));
     /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #c6c9cb 0%, #E3E6E8 100%);
     /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%);
+    background: -o-radial-gradient(center, ellipse cover, #c6c9cb 0%, #E3E6E8 100%);
     /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%);
+    background: -ms-radial-gradient(center, ellipse cover, #c6c9cb 0%, #E3E6E8 100%);
     /* IE10+ */
-    background: radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%);
+    background: radial-gradient(center, ellipse cover, #c6c9cb 0%, #E3E6E8 100%);
     /* W3C */
 }
 
-.texto_cabecera {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    background: #d6f0fd;
+.cabecera_menu {
+    background: #96999b;
+    background: -moz-radial-gradient(center, ellipse cover, orange 0%, #f6dfd4 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, orange), color-stop(100%, #f6dfd4));
+    /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, orange 0%, #f6dfd4 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, orange 0%, #f6dfd4 100%);
+    /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, orange 0%, #f6dfd4 100%);
+    /* IE10+ */
+    background: radial-gradient(center, ellipse cover, orange 0%, #f6dfd4 100%);
+    /* W3C */
 }
 
+.cabecera_menu span {
 
-.btn_catalogo{
-    background-image:url('/img/Catalogo_bn.png');
-    background-position: center;
-    background-size: 75% ;
-    background-repeat: no-repeat;
-    background-color:  #f2f9fe;
-    width:110px;
-    height:110px;
-    border-radius:100%;
-    text-transform: uppercase;
+    line-height: 260px;
+}
+
+.cabecera_menu ul li {
+    padding: 0 15px;
+    list-style: none;
     text-decoration: none;
-    font-size: 10px;
-    text-align: center;
-    font-weight: bold;
-    float:left;
-    padding-left: 15px;
-    display: block;
-    color: black;
+    position: relative;
+    left: 100%;
 }
 
-.btn_catalogo:hover{
-    border-radius:100%;
-    background-image:url('/img/Catalogo.png');
+.btn_catalogo {
+    background-image: url('/img/Catalogo_bn.png');
     background-position: center;
     background-size: 75%;
     background-repeat: no-repeat;
-    background-color:  #d6f0fd;
-    width:110px;
-    height:110px;
+    background-color: #f6dfd4;
+    width: 110px;
+    height: 110px;
+    border-radius: 100%;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 10px;
+    text-align: center;
+    font-weight: bold;
+    float: left;
+    padding-left: 15px;
+    display: block;
+    color: black;
+}
+
+.btn_catalogo:hover {
+    border-radius: 100%;
+    background-image: url('/img/Catalogo.png');
+    background-position: center;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-color: #e8d1c6;
+    width: 110px;
+    height: 110px;
     text-transform: uppercase;
     text-decoration: none;
     text-align: center;
     font-size: 10px;
     font-weight: bold;
     color: black;
-    float:left;
+    float: left;
     padding-left: 15px;
     display: block;
+    max-width: 100%;
 }
 
 .imagen_seccion {
-    width:100px;
-    height:100px;
+    width: 100px;
+    height: 100px;
     color: black;
     display: block;
     margin-left: 20px;
+    max-width: 100%;
 }
 
-.cabecera_menu span{
-    line-height: 260px;
+.color_menu {
+    background: #96999b;
+    background: -moz-radial-gradient(center, ellipse cover, orange 0%, #f6dfd4 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, orange), color-stop(100%, #f6dfd4));
+    /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, orange 0%, #f6dfd4 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, orange 0%, #f6dfd4 100%);
+    /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, orange 0%, #f6dfd4 100%);
+    /* IE10+ */
+    background: radial-gradient(center, ellipse cover, orange 0%, #f6dfd4 100%);
+    /* W3C */
 }
-.cabecera_menu ul li{
-    padding: 0 15px;
-    list-style:none;
-    text-decoration: none;
-    position:relative;
-    left:100%;
+
+.super-centered {
+    text-align: center;
+    vertical-align: middle;
+    z-index: 9999;
+}
+
+.menu_table > tbody > tr:nth-child(odd) > td,
+.menu_table > tbody > tr:nth-child(odd) > th {
+    background: #96999b;
+    background: -moz-radial-gradient(center, ellipse cover, orange 0%, #f6dfd4 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, orange), color-stop(100%, #f6dfd4));
+    /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, orange 0%, #f6dfd4 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, orange 0%, #f6dfd4 100%);
+    /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, orange 0%, #f6dfd4 100%);
+    /* IE10+ */
+    background: radial-gradient(center, ellipse cover, orange 0%, #f6dfd4 100%);
+    /* W3C */
+}
+
+.menu_table > tbody > tr:nth-child(even) > td,
+.menu_table > tbody > tr:nth-child(even) > th {
+    background: #96999b;
+    background: -moz-radial-gradient(center, ellipse cover, orange 0%, #f6dfd4 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, orange), color-stop(100%, #f6dfd4));
+    /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, orange 0%, #f6dfd4 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, orange 0%, #f6dfd4 100%);
+    /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, orange 0%, #f6dfd4 100%);
+    /* IE10+ */
+    background: radial-gradient(center, ellipse cover, orange 0%, #f6dfd4 100%);
+    /* W3C */
+}
+
+.table > thead > tr {
+    background-color: gray;
+    color: white;
+}
+
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+    background-color: orange;
+}
+
+.table-striped > tbody > tr:nth-child(even) > td,
+.table-striped > tbody > tr:nth-child(even) > th {
+    background-color: lightgray;
+}
+
+.panel-responsive {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #ddd;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #ddd;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive > .table {
+    margin-bottom: 0;
+}
+
+.table-responsive > .table > thead > tr > th,
+.table-responsive > .table > tbody > tr > th,
+.table-responsive > .table > tfoot > tr > th,
+.table-responsive > .table > thead > tr > td,
+.table-responsive > .table > tbody > tr > td,
+.table-responsive > .table > tfoot > tr > td {
+    white-space: nowrap;
+}
+
+.form_cliente {
+    background-color: lightgray;
+    color: white;
+    width: 800px;
+    height: 100%;
+}
+
+.legend {
+    background-color: orange;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
 }
