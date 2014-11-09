@@ -1,49 +1,10 @@
-<!doctype html>
-
-<!-- ASSIGN OUR ANGULAR MODULE -->
-<html ng-app="shop">
-<head>
-    <!-- META -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Optimize mobile viewport -->
-
-    <title>Node/Angular Todo App</title>
-
-    <!-- SCROLLS -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-    <!-- SPELLS -->
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
-    <script src="//code.jquery.com/jquery-2.1.1.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.11.2/ui-bootstrap-tpls.js"></script>
-
-    <!-- load bootstrap -->
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-
-    <!-- load angular -->
-    <script src="core.js"></script>
-    <script src="includes.js"></script>
-
-
-    <script>
-        $(function () {
-            $("#cabecera").load("cabecera.html");
-        });
-    </script>
-</head>
-<!-- SET THE CONTROLLER AND GET ALL TODOS WITH INITIALIZE FUNCTION -->
-<body>
-<!-- INCLUDE CABECERA -->
-<div class="container-fluid" id="cabecera">
-
-</div>
-<div class="container">
+<div id="tablaCuentas" class="container">
 
     <div style="padding-top:50px">
         <img src="/img/Catalogo.png" class="imagen_seccion">
     </div>
     <!--Table-->
-    <div ng-controller="cuentasCtrl" class="container" style="padding-top:20px">
+    <div class="container" style="padding-top:20px">
         <div class="input-group"><span class="input-group-addon">Filtrar</span>
             <input id="filter" style="width: 100%" class="input-medium" ng-model="nameFilter"
                    placeholder="Escribir aqui...">
