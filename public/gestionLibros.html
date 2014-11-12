@@ -1,16 +1,50 @@
 <div class="container" id="gestionLibros">
 
-    <div style="padding-top:50px">
-        <img src="/img/Catalogo.png" class="imagen_seccion">
+    <div class="row">
+        <div align="left" class="col-sm-2">
+            <img src="/img/Catalogo.png" class="imagen_seccion">
+        </div>
+        <div align="left" class="col-sm-10">
+            <fieldset>
+                <form role="form">
+                    <div class="row">
+                        <div class="searchform col-sm-4">
+                            <label for="ean_search" class="col-sm-2">EAN</label>
+                            <input type="ean" class="form-control"  ng-model="ean" id="ean_search" placeholder="EAN">
+                        </div>
+                    </div>
+                    <div class="row">
+                         <div style="padding-top: 20px" id="hueco2" class="col-md-10">
+                        </div>
+                        <div style="padding-top: 20px" class="col-md-2">
+                            <button class="btn btn-default"  ng-click="searchEAN(ean)"><span class="glyphicon glyphicon-search"></span> Buscar</button>
+                        </div>
+                    </div>
+                </form>
+            </fieldset>
+        </div>
     </div>
+
     <!--Table-->
-    <div  style="padding-top:20px">
+    <div  style="padding-top:20px" class="input-group"><span class="input-group-addon">Filtrar</span>
+        <input id="textFilter" style="width: 100%" class="input-medium" ng-model="textFilter"
+               placeholder="Escribir aqui...">
+    </div>
+    <div>
         <table  class="table table-responsive table-striped table-bordered table-hover" style="width: 100%">
             <thead>
             <tr><th colspan="6">Gestion de Libros</th></tr>
             </thead>
+            <thead align="center">
+                <td>ISBN</td>
+                <td>Articulo</td>
+                <td>Sello</td>
+                <td>Coleccion</td>
+                <td>EAN</td>
+                <td>PVP IVA</td>
+            </thead>
             <tbody>
-            <tr ng-repeat="libroDBO in librosList | filter : paginate">
+            <tr ng-repeat="libroDBO in librosList | filter: searchFilter | filter : paginate">
                 <td>
                     {{libroDBO.ISBN}}
                 </td>

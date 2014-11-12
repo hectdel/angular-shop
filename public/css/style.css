@@ -260,3 +260,22 @@ body {
 .view-animate.ng-leave.ng-leave-active {
     left:-100%;
 }
+
+.searchform > input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display:inline-block;
+    *display: inline;     /* for IE7*/
+    zoom:1;              /* for IE7*/
+    vertical-align:middle;
+    margin-left:20px
+}
+
+.searchform > label {
+    display:inline-block;
+    *display: inline;     /* for IE7*/
+    zoom:1;              /* for IE7*/
+    float: left;
+    padding-top: 5px;
+    text-align: right;
+}

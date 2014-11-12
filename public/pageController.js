@@ -22,15 +22,18 @@ shop.controller('gestionLibrosCtr', ['$scope', '$http', '$modal', '$log', functi
     $scope.formData = {};
     $scope.librosList = [];
 
+    $scope.searchFilter = function (libro) {
+        var keyword = new RegExp($scope.textFilter, 'i');
+        return !$scope.textFilter || keyword.test(libro.ISBN) || keyword.test(libro.Articulo) || keyword.test(libro.EAN);
+    };
+
     // when landing on the page, get all todos and show them
     $http.get('/libros')
         .success(function (data) {
-
             $scope.librosList = data;
             $scope.totalItems =  $scope.librosList.length;
             $scope.currentPage = 1;
-            $scope.numPerPage = 5;
-
+            $scope.numPerPage = 15;
         })
         .error(function (data) {
             $log.error('Error: ' + data);
@@ -44,6 +47,26 @@ shop.controller('gestionLibrosCtr', ['$scope', '$http', '$modal', '$log', functi
         index = $scope.librosList.indexOf(value);
         return (begin <= index && index < end);
     };
+
+    $scope.searchEAN = function(value) {
+        $log.log("Buscar libro por EAN:",value);
+        if (isNaN(value)){
+            $http.get('/libros');
+
+        } else {
+        $http.get('/libros/EAN/'+value)
+            .success(function (data) {
+                $scope.librosList = data;
+                $scope.totalItems =  $scope.librosList.length;
+                $scope.currentPage = 1;
+                $scope.numPerPage = 15;
+            })
+            .error(function (data) {
+                $log.error('Error: ' + data);
+            });
+        }
+    };
+
 }]);
 
 shop.controller('cuentasCtrl', ['$scope', '$http', '$modal', '$log', function ($scope, $http, $modal, $log) {
