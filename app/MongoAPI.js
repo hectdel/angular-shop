@@ -35,14 +35,15 @@ module.exports = function(app) {
 
     app.get('/libros/EAN/:ean', function(req, res) {
         var param = req.params;
-        // use mongoose to get all todos in the database
-        Libro.find({'EAN': param.ean}, function(err, librosList) {
-
-            // if there is an error retrieving, send the error. nothing after res.send(err) will execute
+        var query= Libro.find({'EAN':param.ean});
+        if (param.ean === "undefined"){
+            query = Libro.find({});
+        }
+       query.exec(function(err, librosList) {
             if (err)
                 res.send(err)
 
-            res.json(librosList); // return all todos in JSON format
+            res.json(librosList);
         });
     });
 

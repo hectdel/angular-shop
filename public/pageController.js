@@ -7,11 +7,11 @@ shop.config([
            templateUrl : '/'
         })
         .when('/gestionLibros', {
-            templateUrl : '/gestionLibros.html',
+            templateUrl : 'html/gestionLibros.html',
             controller : 'gestionLibrosCtr'
         })
         .when('/tablaCuentas', {
-            templateUrl : '/tablaCuentas.html',
+            templateUrl : 'html/tablaCuentas.html',
             controller : 'cuentasCtrl'
         })
     }
@@ -50,10 +50,7 @@ shop.controller('gestionLibrosCtr', ['$scope', '$http', '$modal', '$log', functi
 
     $scope.searchEAN = function(value) {
         $log.log("Buscar libro por EAN:",value);
-        if (isNaN(value)){
-            $http.get('/libros');
 
-        } else {
         $http.get('/libros/EAN/'+value)
             .success(function (data) {
                 $scope.librosList = data;
@@ -64,7 +61,22 @@ shop.controller('gestionLibrosCtr', ['$scope', '$http', '$modal', '$log', functi
             .error(function (data) {
                 $log.error('Error: ' + data);
             });
-        }
+
+    };
+
+    $scope.limpiar = function() {
+
+        $http.get('/libros/EAN/undefined')
+            .success(function (data) {
+                $scope.librosList = data;
+                $scope.totalItems =  $scope.librosList.length;
+                $scope.currentPage = 1;
+                $scope.numPerPage = 15;
+                $scope.ean = "";
+            })
+            .error(function (data) {
+                $log.error('Error: ' + data);
+            });
     };
 
 }]);
@@ -74,6 +86,8 @@ shop.controller('cuentasCtrl', ['$scope', '$http', '$modal', '$log', function ($
     $scope.formData = {};
     $scope.cuentasList = [];
     $scope.modalShown = false;
+    $scope.tableView =  "html/tables/tablaClientes.html";
+    $scope.formView  = "html/forms/nuevo_cliente.html";
 
     $scope.searchFilter = function (cuenta) {
         var keyword = new RegExp($scope.nameFilter, 'i');
