@@ -63,9 +63,25 @@ shop.controller('gestionLibrosCtr', ['$scope', '$http', '$modal', '$log', functi
             });
     };
 
+    $scope.searchArticulo = function(value) {
+        $log.log("Buscar libro por Articulo:",value);
+
+        $http.get('/libros/Articulo/'+value)
+            .success(function (data) {
+                $scope.librosList = data;
+                $scope.totalItems =  $scope.librosList.length;
+                $scope.currentPage = 1;
+                $scope.numPerPage = 15;
+            })
+            .error(function (data) {
+                $log.error('Error: ' + data);
+            });
+    };
+
     $scope.limpiar = function() {
         $log.log("limpiar Input EAN");
         $scope.ean = null;
+        $scope.articulo = null;
         $scope.librosList = [];
         $scope.searchEAN("undefined");
     };

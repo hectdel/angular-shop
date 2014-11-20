@@ -52,6 +52,23 @@ module.exports = function(app) {
     });
 
 
+    app.get('/libros/Articulo/:articulo', function(req, res) {
+        var param = req.params;
+        var query =  Libro.find({'Articulo': new RegExp('.*'+param.articulo+'.*', "i")});
+        if (param.articulo === "null" || param.articulo ==="undefined"){
+            query = Libro.find();
+        }
+        // use mongoose to get all todos in the database
+        query.exec(function(err, librosList) {
+
+            // if there is an error retrieving, send the error. nothing after res.send(err) will execute
+            if (err)
+                res.send(err)
+
+            res.json(librosList); // return all todos in JSON format
+        });
+    });
+
     // application -------------------------------------------------------------
 	app.get('*', function(req, res) {
 		res.sendfile('./public/index.html'); // load the single view file (angular will handle the page changes on the front-end)

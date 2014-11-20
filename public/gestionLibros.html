@@ -8,18 +8,25 @@
             <fieldset>
                 <form role="form">
                     <div class="row">
-                        <div class="searchform col-sm-4">
-                            <label for="ean_search" class="col-sm-2">EAN</label>
-                            <input type="ean" class="form-control"  ng-model="ean" id="ean_search" placeholder="EAN">
-                            <button class="btn btn-default"  ng-click="searchEAN(ean)"><span class="glyphicon glyphicon-search"></span> Buscar</button>
+                        <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+                            <div>
+                                <label for="ean_search">EAN</label>
+                                <input type="ean" class="form-control"  ng-model="ean" id="ean_search" placeholder="EAN" />
+                                <button class="btn btn-default"  ng-click="searchEAN(ean)"><span class="glyphicon glyphicon-search"></span></button>
+                            </div>
+                         </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+                            <div>
+                                <label for="ean_search">Articulo</label>
+                                <input type="articulo" class="form-control"  ng-model="articulo" id="articulo_search" placeholder="Articulo">
+                                <button class="btn btn-default"  ng-click="searchArticulo(articulo)"><span class="glyphicon glyphicon-search"></span></button>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                         <div style="padding-top: 20px" id="hueco2" class="col-md-10">
-                        </div>
-                        <div style="padding-top: 20px" class="col-md-2">
-                            <button class="btn btn-default"  ng-click="limpiar()">Limpiar</button>
-                        </div>
+                    <div style="padding-top: 10px" id="hueco2" class="col-sm-10 col-md-10 col-lg-10">
+                    </div>
+                    <div style="padding-top: 10px" class="col-sm-2 col-md-2 col-lg-2">
+                        <button class="btn btn-default"  ng-click="limpiar()">Limpiar</button>
                     </div>
                 </form>
             </fieldset>
