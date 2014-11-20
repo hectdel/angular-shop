@@ -1,6 +1,7 @@
 var Cuenta = require('./models/cuentaDBO');
 var Libro = require('./models/libroDBO');
 
+
 module.exports = function(app) {
 
 	// api ---------------------------------------------------------------------
@@ -35,8 +36,12 @@ module.exports = function(app) {
 
     app.get('/libros/EAN/:ean', function(req, res) {
         var param = req.params;
+        var query =  Libro.find({'EAN': param.ean});
+        if (param.ean === "null" || param.ean ==="undefined"){
+            query = Libro.find();
+        }
         // use mongoose to get all todos in the database
-        Libro.find({'EAN': param.ean}, function(err, librosList) {
+        query.exec(function(err, librosList) {
 
             // if there is an error retrieving, send the error. nothing after res.send(err) will execute
             if (err)

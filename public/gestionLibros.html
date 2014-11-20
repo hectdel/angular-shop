@@ -11,13 +11,14 @@
                         <div class="searchform col-sm-4">
                             <label for="ean_search" class="col-sm-2">EAN</label>
                             <input type="ean" class="form-control"  ng-model="ean" id="ean_search" placeholder="EAN">
+                            <button class="btn btn-default"  ng-click="searchEAN(ean)"><span class="glyphicon glyphicon-search"></span> Buscar</button>
                         </div>
                     </div>
                     <div class="row">
                          <div style="padding-top: 20px" id="hueco2" class="col-md-10">
                         </div>
                         <div style="padding-top: 20px" class="col-md-2">
-                            <button class="btn btn-default"  ng-click="searchEAN(ean)"><span class="glyphicon glyphicon-search"></span> Buscar</button>
+                            <button class="btn btn-default"  ng-click="limpiar()">Limpiar</button>
                         </div>
                     </div>
                 </form>

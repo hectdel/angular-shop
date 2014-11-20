@@ -50,10 +50,7 @@ shop.controller('gestionLibrosCtr', ['$scope', '$http', '$modal', '$log', functi
 
     $scope.searchEAN = function(value) {
         $log.log("Buscar libro por EAN:",value);
-        if (isNaN(value)){
-            $http.get('/libros');
 
-        } else {
         $http.get('/libros/EAN/'+value)
             .success(function (data) {
                 $scope.librosList = data;
@@ -64,7 +61,13 @@ shop.controller('gestionLibrosCtr', ['$scope', '$http', '$modal', '$log', functi
             .error(function (data) {
                 $log.error('Error: ' + data);
             });
-        }
+    };
+
+    $scope.limpiar = function() {
+        $log.log("limpiar Input EAN");
+        $scope.ean = null;
+        $scope.librosList = [];
+        $scope.searchEAN("undefined");
     };
 
 }]);
